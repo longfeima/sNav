@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73E36CE39A559476EDB3EF3B /* libPods-sNav.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A2C72AAF12F56368B1781A /* libPods-sNav.a */; };
 		C71D74542089776100692950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D74532089776100692950 /* AppDelegate.m */; };
 		C71D74572089776100692950 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71D74562089776100692950 /* ViewController.m */; };
 		C71D745A2089776100692950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71D74582089776100692950 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4A2C72AAF12F56368B1781A /* libPods-sNav.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sNav.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDEDC555E556AA3489CE4BB /* Pods-sNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sNav.release.xcconfig"; path = "Pods/Target Support Files/Pods-sNav/Pods-sNav.release.xcconfig"; sourceTree = "<group>"; };
+		C16936CD3020E5C8F6906DEE /* Pods-sNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sNav.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sNav/Pods-sNav.debug.xcconfig"; sourceTree = "<group>"; };
 		C71D744F2089776100692950 /* sNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71D74522089776100692950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C71D74532089776100692950 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E36CE39A559476EDB3EF3B /* libPods-sNav.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F7B00E5E4BC1AC4A7E392E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C16936CD3020E5C8F6906DEE /* Pods-sNav.debug.xcconfig */,
+				AEDEDC555E556AA3489CE4BB /* Pods-sNav.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C71D74462089776100692950 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				C71D746A2089776200692950 /* sNavTests */,
 				C71D74752089776200692950 /* sNavUITests */,
 				C71D74502089776100692950 /* Products */,
+				1F7B00E5E4BC1AC4A7E392E0 /* Pods */,
+				F41BF06A21427F5B290EA954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +148,14 @@
 			path = sNavUITests;
 			sourceTree = "<group>";
 		};
+		F41BF06A21427F5B290EA954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4A2C72AAF12F56368B1781A /* libPods-sNav.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C71D747B2089776300692950 /* Build configuration list for PBXNativeTarget "sNav" */;
 			buildPhases = (
+				9521C7444C69E9EA2A94989C /* [CP] Check Pods Manifest.lock */,
 				C71D744B2089776100692950 /* Sources */,
 				C71D744C2089776100692950 /* Frameworks */,
 				C71D744D2089776100692950 /* Resources */,
@@ -256,6 +281,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9521C7444C69E9EA2A94989C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sNav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C71D744B2089776100692950 /* Sources */ = {
@@ -431,15 +477,13 @@
 		};
 		C71D747C2089776300692950 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C16936CD3020E5C8F6906DEE /* Pods-sNav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNav/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,15 +492,13 @@
 		};
 		C71D747D2089776300692950 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEDEDC555E556AA3489CE4BB /* Pods-sNav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNav/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,11 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNavTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNavTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,11 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNavTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNavTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,11 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNavUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNavUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,11 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5LW28A78P;
 				INFOPLIST_FILE = sNavUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seven.sNavUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
